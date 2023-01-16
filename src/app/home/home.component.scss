@@ -1,0 +1,23 @@
+.example-card {
+    max-width: 800px;
+    background-color: skyblue;
+    color: whitesmoke;
+  }
+  .text-label{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 28px;
+    color: whitesmoke;
+  }
+  mat-slider{
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 170%;
+  //   background-color: aliceblue;
+   }
+
+   ::ng-deep{
+    .mat-slider-horizontal .mat-slider-track-background {
+      background-color: aliceblue;
+    }
+   }

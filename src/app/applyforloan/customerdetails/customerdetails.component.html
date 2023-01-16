@@ -1,0 +1,73 @@
+<form #customerform="ngForm">
+    <div class="row">
+        <div class="col-md-4">
+            <mat-form-field appearance="fill" class="ex-full-width">
+                <mat-label>Employeement Type</mat-label>
+                <mat-select [(ngModel)]="customerobj.employeeType" name="emptypes" id="id1" required>
+                    <mat-option *ngFor="let e of emptypes" [value]="e.value">
+                        {{e.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-md-4" *ngIf="customerobj.employeeType =='salaried'">
+            <mat-form-field appearance="fill" class="ex-full-width">
+                <mat-label>Mobile No</mat-label>
+                <input matInput name="mobno" [(ngModel)]="customerobj.mobileNo" id="id2" required appOnlynodirective>
+            </mat-form-field>
+        </div>
+        <div class="col-md-4" *ngIf="customerobj.employeeType =='salaried'">
+            <mat-form-field appearance="fill" class="ex-full-width">
+                <mat-label>PAN no</mat-label>
+                <input matInput name="panNo" [(ngModel)]="customerobj.PANno" id="id3" required>
+            </mat-form-field>
+        </div>
+        <div class="col-md-4" *ngIf="customerobj.employeeType =='salaried'">
+            <mat-form-field appearance="fill" class="ex-full-width">
+                <mat-label>First Name(as per PAN)</mat-label>
+                <input matInput name="fname" [(ngModel)]="customerobj. firstname" id="id4" required>
+            </mat-form-field>
+        </div>
+        <div class="col-md-4" *ngIf="customerobj.employeeType =='salaried'">
+            <mat-form-field appearance="fill" class="ex-full-width">
+                <mat-label>Last Name(as per PAN)</mat-label>
+                <input matInput name="lname" [(ngModel)]="customerobj.lastname" id="id5">
+            </mat-form-field>
+        </div>
+        <div class="col-md-4" *ngIf="customerobj.employeeType =='salaried'">
+            <mat-form-field appearance="fill">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="picker" name="dob" [(ngModel)]="customerobj.dob" id="id6">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="col-md-4" *ngIf="customerobj.employeeType =='salaried'">
+            <mat-form-field appearance="fill" class="ex-full-width">
+                <mat-label>Gender</mat-label>
+                <mat-select [(ngModel)]="customerobj.gender" name="gender" id="id7">
+                    <mat-option *ngFor="let g of gender" [value]="g.value">
+                        {{g.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-md-4" *ngIf="customerobj.employeeType =='salaried'">
+            <mat-form-field appearance="fill" class="ex-full-width">
+                <mat-label>Pincode</mat-label>
+                <input matInput name="pincode" [(ngModel)]="customerobj.pincode" id="id8">
+            </mat-form-field>
+        </div>
+        <div class="col-md-4" *ngIf="customerobj.employeeType =='salaried'">
+            <mat-form-field appearance="fill" class="ex-full-width">
+                <mat-label>City</mat-label>
+                <input matInput name="city" [(ngModel)]="customerobj.city" id="id9">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row submitbtn">
+        <button mat-raised-button color="primary">Continue</button>
+
+    </div>
+</form>
