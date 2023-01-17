@@ -13,7 +13,7 @@
         <div class="col-md-4" *ngIf="customerobj.employeeType =='salaried'">
             <mat-form-field appearance="fill" class="ex-full-width">
                 <mat-label>Mobile No</mat-label>
-                <input matInput name="mobno" [(ngModel)]="customerobj.mobileNo" id="id2" required appOnlynodirective>
+                <input matInput name="mobno" [(ngModel)]="customerobj.mobileNo" id="id2" required minlength="10" maxlength="10" appOnlynodirective (ngModelChange)="sendotp()">
             </mat-form-field>
         </div>
         <div class="col-md-4" *ngIf="customerobj.employeeType =='salaried'">

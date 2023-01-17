@@ -26,6 +26,9 @@ import { CustomerdetailsComponent } from './applyforloan/customerdetails/custome
 import { TrackorderComponent } from './applyforloan/trackorder/trackorder.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { OnlynodirectiveDirective } from './onlynodirective.directive';
+import { DialogcompoComponent } from './dialogcompo/dialogcompo.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,8 @@ import { OnlynodirectiveDirective } from './onlynodirective.directive';
     ApplyforloanComponent,
     CustomerdetailsComponent,
     TrackorderComponent,
-    OnlynodirectiveDirective
+    OnlynodirectiveDirective,
+    // DialogcompoComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,8 @@ import { OnlynodirectiveDirective } from './onlynodirective.directive';
     MatSelectModule,
     MatInputModule,
     MatDatepickerModule,
-   MatNativeDateModule
+   MatNativeDateModule,
+   MatDialogModule
   ],
   exports:[ MatStepperModule],
   providers: [],

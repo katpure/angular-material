@@ -1,0 +1,12 @@
+<!-- <h1 mat-dialog-tital>hi {{data.name}}</h1> -->
+
+<h6 class="text-center">Please enter the OTP send to your mobile number &nbsp;{{data.mobileNo}}</h6>
+
+<div class="row text-center mt-2">
+      <input type="text" name="otp" id="otp" #otpenter>
+    <button class="mt-t btn btn-primary" type="button" (click)="verifyotp(otpenter.value)">Verify otp</button>
+
+</div> 
+<p>
+OTP received is &nbsp;{{data.otp}}
+</p>
